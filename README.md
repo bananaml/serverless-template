@@ -55,9 +55,11 @@ This will expose your `app.py` endpoint at `localhost:8000` for testing.
 ### Testing the dev server:
 
 **Python**
+
 Edit the `model_inputs` object in `dev/test.py` to fit whatever schema you parse for in `src/app.py`
 Run it with: `python3 dev/test.py`
 
 **Bash**
+
 Edit the `-d {JSON}` object in `dev/test.sh` to fit whatever schema you parse for in `src/app.py`
 Run it with: `bash dev/test.sh`
