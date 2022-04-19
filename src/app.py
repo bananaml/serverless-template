@@ -7,6 +7,10 @@ model = load_model()
 
 app = Sanic("my_app")
 
+@app.route('/healthcheck', methods=["GET"])
+def healthcheck(request):
+    return response.json({"state": "healthy"})
+
 @app.route('/', methods=["POST"])
 def inference(request):
     try:
