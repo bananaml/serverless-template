@@ -7,11 +7,12 @@ model = load_model()
 
 app = Sanic("my_app")
 
+
 @app.route('/healthcheck', methods=["GET"])
 def healthcheck(request):
     return response.json({"state": "healthy"})
 
-@app.route('/', methods=["POST"])
+@app.route('/', methods=["POST"]) # Do not edit - POST requests to "/" are a required interface
 def inference(request):
     try:
         model_inputs = response.json.loads(request.json)
@@ -25,7 +26,7 @@ def inference(request):
     
     output = run_model(model, prompt)
 
-    return response.json(output)
+    return response.json(output) # Do not edit - returning a dictionary as JSON is a required interface
 
 
 if __name__ == '__main__':
