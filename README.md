@@ -6,9 +6,12 @@ Setup and host your ML on Banana in minutes
 # How to use this Template repo
 1) Fork this repo
 
-2) Install the [Banana Github App](https://github.com/apps/banana-serverless) to the forked repo
+2) ~~Install the [Banana Github App](https://github.com/apps/banana-serverless) to the forked repo~~
+	- Note: The deployment pipeline feature is under construction and will be ready for release soon.
 
-3) Tweak the repo to your liking:
+3) Edit `banana_config.json` with your API Key, [found here](https://app.banana.dev)
+
+4) Tweak the repo to your liking:
 - `requirements.txt` 
 	- this file holds the pip dependencies, which are installed via the Dockerfile.
 	- add or remove your pip packages, one per line.
@@ -27,7 +30,7 @@ Setup and host your ML on Banana in minutes
 		- the values you parse from model_inputs defines the JSON schema you'd use as inputs
 		- the json you return as model_outputs defines the JSON schema you'd expect as an output
 
-4) Push to main to trigger a build and deploy
+5) Push to main to trigger a build and deploy
 
 ### or do it your own way:
 
@@ -37,7 +40,14 @@ Setup and host your ML on Banana in minutes
 
 3) Install the [Banana Github App](https://github.com/apps/banana-serverless) to your repo
 
-4) Push to main to trigger a build and deploy
+4) Add a `banana_config.json` to the root of the repo, with the following contents:
+```javascript
+{
+    "apiKey": "YOUR_API_KEY"
+}
+```
+
+5) Push to main to trigger a build and deploy
 
 # Before you deploy: local dev
 We've provided a few convenience scripts to help you get up and running quickly.
