@@ -83,5 +83,5 @@ We will reply and confirm when you're added.
 
 To continue to the Banana SDKs, find them linked here:
 - [Python](https://github.com/bananaml/banana-python-sdk)
-- [Node JS / Typescript](https://github.com/bananaml/banana-node-sdk)
+- [Node JS / Typescript](https://github.com/bananaml/banana-node-sdk)g
 - [Go](https://github.com/bananaml/banana-go)
