@@ -3,12 +3,10 @@
 
 Setup and host your ML on Banana in minutes
 
-# How to use this Template repo
+# How to use this Template repo:
 1) Fork this repo
 
-2) Install the [Banana Github App](https://github.com/apps/banana-serverless) to the forked repo
-
-3) Tweak the repo to your liking:
+2) Tweak the repo to your liking:
 - `requirements.txt` 
 	- this file holds the pip dependencies, which are installed via the Dockerfile.
 	- add or remove your pip packages, one per line.
@@ -27,19 +25,18 @@ Setup and host your ML on Banana in minutes
 		- the values you parse from model_inputs defines the JSON schema you'd use as inputs
 		- the json you return as model_outputs defines the JSON schema you'd expect as an output
 
-4) Push to main to trigger a build and deploy
+3) Test and verify it works
 
-### or do it your own way:
+### Or do it your own way:
 
 1) Write an http server in any language
 
 2) Configure it to recieve json POST requests to localhost:8000
 
-3) Install the [Banana Github App](https://github.com/apps/banana-serverless) to your repo
+3) Test and verify it works
 
-4) Push to main to trigger a build and deploy
 
-# Before you deploy: local dev
+## How to test locally:
 We've provided a few convenience scripts to help you get up and running quickly.
 
 ### Building and running the dev server:
@@ -63,3 +60,28 @@ Run it with: `python3 dev/test.py`
 
 Edit the `-d {JSON}` object in `dev/test.sh` to fit whatever schema you parse for in `src/app.py`
 Run it with: `bash dev/test.sh`
+
+# Deploying to Banana hosted Serverless GPUs:
+
+1) [Log into the Banana dashboard](https://app.banana.dev/) and get your API Key
+
+2) Email us at `onboarding@banana.dev` with the following message:
+```
+Hello, I'd like to be onboarded to serverless.
+My github username is: YOUR_GITHUB_USERNAME
+My Banana API Key is: YOUR_API_KEY
+My preferred billing email is: YOU@EMAIL.COM
+```
+Your github username, banana api key, and email are required for us to authorize you into the system. 
+We will reply and confirm when you're added.
+
+3) Install the [Banana Github App](https://github.com/apps/banana-serverless) to the forked repo. 
+
+4) Push to main to trigger a build and deploy to the hosted backend. This will do nothing if you have not completed the email in step 2 above.
+
+5) Monitor your email inbox for status updates, which will include a unique model key for this repo for you to use through the Banana SDKs.
+
+To continue to the Banana SDKs, find them linked here:
+- [Python](https://github.com/bananaml/banana-python-sdk)
+- [Node JS / Typescript](https://github.com/bananaml/banana-node-sdk)g
+- [Go](https://github.com/bananaml/banana-go)
