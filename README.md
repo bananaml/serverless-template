@@ -16,6 +16,7 @@ Setup and host your ML on Banana in minutes
 - `src/warmup.py` 
 	- this file defines `load_model()`, which loads the model from local weights, loads it onto the GPU, and returns the model object.
 	- add or remove logic to the `load_model()` function for any logic that you want to run once at system startup, before the http server starts.
+	- the max size of a model is currently limited to 15gb in GPU RAM. Banana does not support greater than that at the moment.
 - `src/run.py` 
 	- this file defines `run_model()`, which takes a model object and any arguments and runs an inference/prediction against the model.
 	- add or remove logic to the `run_model()` function for any ML-related logic that you want to run for every call, such as tensor preprocessing, sampling logic in postprocessing, etc.
