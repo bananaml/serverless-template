@@ -2,6 +2,10 @@ FROM pytorch/pytorch:1.8.1-cuda11.1-cudnn8-runtime
 
 WORKDIR /
 
+# nvidia rotated their GPG keys so need to refresh them 
+RUN rm /etc/apt/sources.list.d/cuda.list
+RUN rm /etc/apt/sources.list.d/nvidia-ml.list
+
 # Install git
 RUN apt-get update && apt-get install -y git
 

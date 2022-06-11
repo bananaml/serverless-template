@@ -53,7 +53,7 @@ Throughout the build we'll sprinkle in some secret sauce to make your server ext
 It'll then be deployed on our Serverless GPU cluster and callable with any of our serverside SDKs:
 
 - [Python](https://github.com/bananaml/banana-python-sdk)
-- [Node / Typescript](https://github.com/bananaml/banana-node-sdk)
+- [Node JS / Typescript](https://github.com/bananaml/banana-node-sdk)
 - [Go](https://github.com/bananaml/banana-go)
 
 Use Banana for scale.
