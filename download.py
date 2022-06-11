@@ -1,5 +1,5 @@
 # In this file, we define download_model
-# It runs during container build time to get model weights locally
+# It runs during container build time to get model weights built into the container
 
 # In this example: A Huggingface BERT model
 
