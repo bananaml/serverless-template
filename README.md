@@ -3,19 +3,23 @@
 
 This repo gives a basic framework for serving ML models in production using simple HTTP servers.
 
-**Quickstart:**
+## Quickstart:
 
-The repo is already set up to run a basic HuggingFace BERT model.
+The repo is already set up to run a basic [HuggingFace BERT](https://huggingface.co/docs/transformers/model_doc/bert) model.
 1. Run `pip3 install -r requirements.txt` to download dependencies.
 2. Run `python3 server.py` to start the server.
 3. Run `python3 test.py` in a different terminal session to test against it.
 
-**Make it your own:**
+## Make it your own:
 
 1. Edit `app.py` to load and run your model.
 2. Make sure to test with `test.py`!
 
-**Move to prod:**
+if deploying using Docker:
+
+3. Edit `download.py` (or the `Dockerfile` itself) with scripts download your custom model weights at build time.
+
+## Move to prod:
 
 At this point, you have a functioning http server for your ML model. You can use it as is, or package it up with our provided `Dockerfile` and deploy it to your favorite container hosting provider!
 
@@ -23,7 +27,7 @@ If Banana is your favorite GPU hosting provider (and we sure hope it is), read o
 
 # 🍌
 
-**Deploy to Banana Serverless:**
+# Deploy to Banana Serverless:
 
 Four steps:
 1. Create your own copy of this template repo. Either:
