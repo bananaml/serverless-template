@@ -43,7 +43,7 @@ My github username is: YOUR_GITHUB_USERNAME
 My Banana API Key is: YOUR_API_KEY
 My preferred billing email is: YOU@EMAIL.COM
 ```
-Your github username, banana api key , and email are required for us to authorize you into the system.
+Your github username, banana api key, and email are required for us to authorize you into the system.
 We will reply and confirm when you're added.
 <br>
 
