@@ -51,7 +51,7 @@ Your github username, banana api key, and email are required for us to authorize
 We will reply and confirm when you're added.
 <br>
 
-From then onward, any pushes to the `main` branch trigger Banana to build and deploy your server, using the Dockerfile.
+From then onward, any pushes to the default repo branch (usually "main" or "master") trigger Banana to build and deploy your server, using the Dockerfile.
 Throughout the build we'll sprinkle in some secret sauce to make your server extra snappy 🔥
 
 It'll then be deployed on our Serverless GPU cluster and callable with any of our serverside SDKs:
@@ -60,4 +60,18 @@ It'll then be deployed on our Serverless GPU cluster and callable with any of ou
 - [Node JS / Typescript](https://github.com/bananaml/banana-node-sdk)
 - [Go](https://github.com/bananaml/banana-go)
 
-Use Banana for scale.
+You can monitor the progress of builds by running a cURL to our logs API:<br>
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"apiKey":"YOUR_API_KEY"}' https://logs.banana.dev | json_pp
+
+```
+
+Once you receive your modelKey from the first build, you can add the optional "modelKey" value to the curl json to filter the return down to a single model.<br>
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"apiKey":"YOUR_API_KEY", "modelKey":"YOUR_MODEL_KEY"}' https://logs.banana.dev | json_pp
+
+```
+
+<br>
+
+## Use Banana for scale.
