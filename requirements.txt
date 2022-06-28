@@ -1,3 +1,4 @@
 sanic
 transformers
+accelerate
 torch
