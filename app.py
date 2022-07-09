@@ -2,7 +2,7 @@ from transformers import pipeline
 import torch
 
 # Init is ran on server startup
-# Load your model to GPU as a global variable here.
+# Load your model to GPU as a global variable here using the variable name "model"
 def init():
     global model
     
