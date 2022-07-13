@@ -29,7 +29,7 @@ If Banana is your favorite GPU hosting provider (and we sure hope it is), read o
 
 # Deploy to Banana Serverless:
 
-Four steps:
+Three steps:
 1. Create your own copy of this template repo. Either:
 - Click "[Fork](https://github.com/bananaml/serverless-template/fork)" (creates a public repo)
 - Click "[Use this Template](https://github.com/bananaml/serverless-template/generate)" (creates a private or public repo)
@@ -37,19 +37,7 @@ Four steps:
 
 2. Install the [Banana Github App](https://github.com/apps/banana-serverless) to your new repo.
 
-3. Get your Banana API Key by [logging in here](https://app.banana.dev).
-
-4. Email us at `onboarding@banana.dev` with the following message:
-
-```
-Hello, I'd like to be onboarded to serverless.
-My github username is: YOUR_GITHUB_USERNAME
-My Banana API Key is: YOUR_API_KEY
-My preferred billing email is: YOU@EMAIL.COM
-```
-Your github username, banana api key, and email are required for us to authorize you into the system.
-We will reply and confirm when you're added.
-<br>
+3. Login in to the [Banana Dashboard](https://app.banana.dev) and setup your account by saving your payment details and linking your Github.
 
 From then onward, any pushes to the default repo branch (usually "main" or "master") trigger Banana to build and deploy your server, using the Dockerfile.
 Throughout the build we'll sprinkle in some secret sauce to make your server extra snappy 🔥
