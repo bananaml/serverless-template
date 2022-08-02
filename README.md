@@ -48,17 +48,7 @@ It'll then be deployed on our Serverless GPU cluster and callable with any of ou
 - [Node JS / Typescript](https://github.com/bananaml/banana-node-sdk)
 - [Go](https://github.com/bananaml/banana-go)
 
-You can monitor the progress of builds by running a cURL to our logs API:<br>
-```bash
-curl -X POST -H "Content-Type: application/json" -d '{"apiKey":"YOUR_API_KEY"}' https://logs.banana.dev | json_pp
-
-```
-
-Once you receive your modelKey from the first build, you can add the optional "modelKey" value to the curl json to filter the return down to a single model.<br>
-```bash
-curl -X POST -H "Content-Type: application/json" -d '{"apiKey":"YOUR_API_KEY", "modelKey":"YOUR_MODEL_KEY"}' https://logs.banana.dev | json_pp
-
-```
+You can monitor buildtime and runtime logs by clicking the logs button in the model view on the Banana Dashboard](https://app.banana.dev)
 
 <br>
 
