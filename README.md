@@ -16,7 +16,7 @@ The repo is already set up to run a basic [HuggingFace BERT](https://huggingface
 
 1. Edit `app.py` to load and run your model.
 2. Make sure to test with `test.py`!
-3. When ready to deploy, edit `download.py` (or the `Dockerfile` itself) with scripts download your custom model weights at build time, as well as requirements.txt with your pip packages.
+3. When ready to deploy, edit `download.py` (or the `Dockerfile` itself) with scripts download your custom model weights at build time, as well as `requirements.txt` with your pip packages.
 
 ## Move to prod:
 
