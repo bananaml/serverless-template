@@ -33,7 +33,7 @@ If Banana is your favorite GPU hosting provider (and we sure hope it is), read o
 - Log in to the [Banana App](https://app.banana.dev)
 - Select your customized repo for deploy!
 
-It'll then be built, optimized, then deployed on our Serverless GPU cluster and callable with any of our SDKs:
+It'll then be built from the dockerfile, optimized, then deployed on our Serverless GPU cluster and callable with any of our SDKs:
 
 - [Python](https://github.com/bananaml/banana-python-sdk)
 - [Node JS / Typescript](https://github.com/bananaml/banana-node-sdk)
