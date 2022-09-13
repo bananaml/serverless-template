@@ -31,7 +31,6 @@ If Banana is your favorite GPU hosting provider (and we sure hope it is), read o
 # Deploy to Banana Serverless:
 
 - Log in to the [Banana App](https://app.banana.dev)
-- Set up your subscription and github integration following the onboarding
 - Select your customized repo for deploy!
 
 It'll then be built from the dockerfile, optimized, then deployed on our Serverless GPU cluster and callable with any of our SDKs:
