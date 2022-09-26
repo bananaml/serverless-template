@@ -31,6 +31,7 @@ The repo default runs a [HuggingFace BERT](https://huggingface.co/docs/transform
 # 4. Ship to prod
 
 You now have a functioning http server that should work using Docker and complete inferences on a GPU
+
 To deploy on banana
 - Log in to the [Banana App](https://app.banana.dev)
 - Connect your github
