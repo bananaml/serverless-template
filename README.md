@@ -7,8 +7,8 @@ To generalize this to deploy anything on Banana, [see the guide here](https://ww
 
 # 1. Download
 Choose 1 of 3 options
-- [Fork this repo](https://github.com/bananaml/serverless-template/fork) to create a public install
-- [Use this Template](https://github.com/bananaml/serverless-template/generate) to creates a private or public install
+- [Fork this repo](https://github.com/bananaml/serverless-template/fork) to create a public repo
+- Click [Use this Template](https://github.com/bananaml/serverless-template/generate), which creates a private or public repo
 - Create your own repo and copy the template files from here this repo into yours
 
 Then clone the repo to a machine with a GPU to install + test it locally 
