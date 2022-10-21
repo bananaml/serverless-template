@@ -4,14 +4,16 @@
 This repo gives a framework to serve ML models in production using simple HTTP servers.
 
 # Quickstart
-**[Follow our quickstart guide](https://docs.banana.dev/banana-docs/quickstart) to use this repo.** 
+**[Follow the quickstart guide in Banana's documentation to use this repo](https://docs.banana.dev/banana-docs/quickstart).** 
+
+*(choose "GitHub Repository" deployment method)*
 
 <br>
 
 # Helpful Links
-To understand the 🍌 Serverless framework and the functionality of each file within it, [go here](https://docs.banana.dev/banana-docs/core-concepts/inference-server/serverless-framework).
+Understand the 🍌 [Serverless framework](https://docs.banana.dev/banana-docs/core-concepts/inference-server/serverless-framework) and functionality of each file within it.
 
-To generalize this framework to deploy anything on Banana, [see the guide here](https://docs.banana.dev/banana-docs/resources/how-to-serve-anything-on-banana).
+Generalize this framework to [deploy anything on Banana](https://docs.banana.dev/banana-docs/resources/how-to-serve-anything-on-banana).
 
 <br>
 
