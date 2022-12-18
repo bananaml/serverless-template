@@ -11,8 +11,9 @@ RUN pip3 install --upgrade pip
 ADD requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
-# Set model id as an ENV variable
-ENV MODEL_ID bert-base-uncased
+# In this example, we can define the hugging face model as an ENV variable
+# and from here pass it to download.py & app.py
+ENV HF_MODEL_NAME bert-base-uncased
 
 # We add the banana boilerplate here
 ADD server.py .
