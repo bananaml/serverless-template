@@ -28,9 +28,8 @@ docker build . -t serverless-template
 ```
 After which you can run the container. Here we also forward the port to access the localhost url outside of the
 container and enable gpu acceleration.
-
 ```
-docker run serverless-template -p 8000:8000 --gpus
+docker run -p 8000:8000 --gpus=all serverless-template
 ```
 
 ## Without docker
@@ -40,7 +39,10 @@ an ENV variable. In this case:
 ```
 export HF_MODEL_NAME=bert-base-uncased
 ```
-
+Make sure you have the required dependencies:
+```
+pip3 install -r requirements.txt
+```
 And then simply run the server.py
 ```
 python3 server.py
