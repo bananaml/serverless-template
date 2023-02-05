@@ -22,4 +22,4 @@ def inference(model_inputs: dict) -> dict:
     result = model.encode(prompt)
 
     # Return the results as a dictionary
-    return {"data": result}
+    return { "data": result }
