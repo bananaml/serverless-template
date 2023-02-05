@@ -1,4 +1,5 @@
 from sentence_transformers import SentenceTransformer
+from sklearn.preprocessing import normalize
 
 
 # Init is ran on server startup
@@ -19,7 +20,11 @@ def inference(model_inputs: dict) -> dict:
         return {"message": "No prompt provided"}
 
     # Run the model
-    result = model.encode(prompt)
+    sentence_embeddings = model.encode(prompt)
+    normalized_embeddings = normalize(sentence_embeddings)
+
+    # Convert the output array to a list
+    output = normalized_embeddings.tolist()
 
     # Return the results as a dictionary
-    return { "data": result }
+    return { "data": output }
