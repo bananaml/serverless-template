@@ -19,7 +19,7 @@ def inference(model_inputs: dict) -> dict:
         return {"message": "No prompt provided"}
 
     # Run the model
-    result = model(prompt)
+    result = model.encode(prompt)
 
     # Return the results as a dictionary
     return result
