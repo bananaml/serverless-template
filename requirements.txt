@@ -1,3 +1,6 @@
 sanic==22.6.2
-transformers
-accelerate
+regex
+setuptools
+wheel
+spacy[cuda113]
+spacy_lookups_data

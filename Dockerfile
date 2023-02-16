@@ -3,6 +3,8 @@ FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
 
 WORKDIR /
 
+ENV LEMMATIZE_LANGUAGE "en"
+
 # Install git
 RUN apt-get update && apt-get install -y git
 
@@ -14,7 +16,7 @@ RUN pip3 install -r requirements.txt
 # We add the banana boilerplate here
 ADD server.py .
 
-# Add your model weight files 
+# Add your model weight files
 # (in this case we have a python script)
 ADD download.py .
 RUN python3 download.py
