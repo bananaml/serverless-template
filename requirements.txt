@@ -1,4 +1,4 @@
-sanic==22.6.2
-transformers
+potassium
+sentence-transformers==2.2.2
 accelerate
 websockets==10.0

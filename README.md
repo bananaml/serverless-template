@@ -1,20 +1,14 @@
+# My Potassium App
+This is a Potassium HTTP server, created with `banana init` CLI
 
-# 🍌 Banana Serverless
+### Testing
+Start a local dev server with `banana dev`
 
-This repo gives a framework to serve ML models in production using simple HTTP servers.
-
-# Quickstart
-**[Follow the quickstart guide in Banana's documentation to use this repo](https://docs.banana.dev/banana-docs/quickstart).** 
-
-*(choose "GitHub Repository" deployment method)*
-
-<br>
-
-# Helpful Links
-Understand the 🍌 [Serverless framework](https://docs.banana.dev/banana-docs/core-concepts/inference-server/serverless-framework) and functionality of each file within it.
-
-Generalize this framework to [deploy anything on Banana](https://docs.banana.dev/banana-docs/resources/how-to-serve-anything-on-banana).
-
-<br>
-
-## Use Banana for scale.
+### Deployment
+1. Create empty repo on [Github](https://github.com)
+2. Push this repo to github
+```
+git remote add origin https://github.com/{username}/{repo-name}.git
+```
+3. [Log into Banana](https://app.banana.dev/onboard)
+4. Select this repo to build and deploy!
