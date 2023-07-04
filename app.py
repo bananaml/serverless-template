@@ -1,24 +1,26 @@
+from potassium import Potassium, Request, Response
+
 from sentence_transformers import SentenceTransformer
 from sklearn.preprocessing import normalize
 
+app = Potassium("my_app")
 
-# Init is ran on server startup
-# Load your model to GPU as a global variable here using the variable name "model"
+# @app.init runs at startup, and loads models into the app's context
+@app.init
 def init():
-    global model
     model = SentenceTransformer("sentence-transformers/paraphrase-mpnet-base-v2")
+   
+    context = {
+        "model": model
+    }
 
+    return context
 
-# Inference is ran for every server call
-# Reference your preloaded global model variable here.
-def inference(model_inputs: dict) -> dict:
-    global model
-
-    # Parse out your arguments
-    prompt = model_inputs.get("prompt", None)
-    if prompt == None:
-        return {"message": "No prompt provided"}
-
+# @app.handler runs for every call
+@app.handler()
+def handler(context: dict, request: Request) -> Response:
+    prompt = request.json.get("prompt")
+    model = context.get("model")
     # Run the model
     sentence_embeddings = model.encode(prompt)
     normalized_embeddings = normalize(sentence_embeddings)
@@ -26,5 +28,10 @@ def inference(model_inputs: dict) -> dict:
     # Convert the output array to a list
     output = normalized_embeddings.tolist()
 
-    # Return the results as a dictionary
-    return { "data": output }
+    return Response(
+        json = {"data": output}, 
+        status=200
+    )
+
+if __name__ == "__main__":
+    app.serve()
